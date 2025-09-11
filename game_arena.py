@@ -1,6 +1,6 @@
 import tkinter as tk
 import math
-import importlib
+import importlib.util
 import os
 import random
 from ship import Ship
@@ -84,8 +84,8 @@ class GameArena:
         Initial positions will be random for now.
         Health starts at self.initial_health.
         """
-        initial_x = random.randint(self.width * 0.1, self.width * 0.9)
-        initial_y = random.randint(self.height * 0.1, self.height * 0.9)
+        initial_x = random.randint(int(self.width * 0.1), int(self.width * 0.9))
+        initial_y = random.randint(int(self.height * 0.1), int(self.height * 0.9))
         initial_health = self.initial_health
         initial_flag = 0 # Default flag
         new_ship = Ship(player_name, initial_x, initial_y, initial_health, initial_flag, strategy_module)
@@ -306,12 +306,8 @@ class GameArena:
         )
 
         for ship in sorted_ships:
-            color = "black"
-            if ship.health <= 0:
-                color = "dark grey" # Indicate destroyed ships on scoreboard
             self.score_labels[ship.player_name] = tk.Label(
                 self.scoreboard_frame,
                 text=f"{ship.player_name} {ship.score}",
-                fg=color
             )
             self.score_labels[ship.player_name].pack(pady=2, anchor=tk.W)

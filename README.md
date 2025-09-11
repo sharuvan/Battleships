@@ -78,7 +78,7 @@ Possible action types:
 *   **Flag:** `{'type': 'flag', 'value': int}`
     *   `value`: An integer flag. Can be used for team identification, status, or any custom purpose.
 *   **Message:** `{'type': 'message', 'content': str}`
-    *   `content`: The message string to broadcast to all other ships. There is a basic spam prevention mechanism (approx. 1 message every 5 ticks per ship).
+    *   `content`: The message string to broadcast to all other ships.
 
 **Example Action Sequence:**
 

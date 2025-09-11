@@ -57,8 +57,8 @@ class Ship:
 
     def respawn(self, arena_width, arena_height, initial_health, respawn_penalty):
         """Respawns the ship at a random location with full health and applies penalty."""
-        self.x = random.randint(arena_width * 0.1, arena_width * 0.9)
-        self.y = random.randint(arena_height * 0.1, arena_height * 0.9)
+        self.x = random.randint(int(arena_width * 0.1), int(arena_width * 0.9))
+        self.y = random.randint(int(arena_height * 0.1), int(arena_height * 0.9))
         self.health = initial_health
         self.add_score(respawn_penalty) # Apply score penalty
         self.clear_movement() # Clear any pending movement
