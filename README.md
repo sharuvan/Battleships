@@ -94,7 +94,7 @@ return actions
 
 ### 5. Running the Game
 
-1.  Make sure you have [Pillow](https://pypi.org/project/Pillow/) installed: `pip install Pillow`
+1.  Make sure you have [Pillow](https://pypi.org/project/Pillow/) installed: `pip install pillow`
 2.  Save your bot file (e.g., `my_awesome_bot.py`) in the `strategies/` folder.
 3.  Open your terminal or command prompt.
 4.  Run the game: `python main.py`
@@ -147,7 +147,6 @@ This is an educational game, so experiment! Here are some ideas:
     *   **Strategic Retreat:** If heavily outnumbered or low on health, move towards a corner or away from enemies to regenerate health.
 *   **"Vision" Management:** The `firing_range` acts as your bot's line-of-sight. Consider aggressive forward movement to gain vision, or cautious movement to stay out of range.
 *   **Prediction:** Can you predict where an enemy will move based on their `current_dx`, `current_dy`, or common bot patterns? Fire at that predicted location instead of their current one.
-*   **Resource Management:** If firing has a cost (not implemented here, but common in games like this), you'd manage ammunition. Here, messages have a spam limit, so use them wisely.
 
 ### Debugging Your Bot:
 
