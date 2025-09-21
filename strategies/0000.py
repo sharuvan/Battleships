@@ -15,8 +15,7 @@ def update_strategy(current_x, current_y, current_health, current_flag,
         current_dy (int): The ship's current movement in Y direction (-2 to 2).
         visible_ships (list): A list of dictionaries, each containing info
                               about other ships within range (x, y, health, flag, distance).
-        messages_received (list): A list of dictionaries, each containing
-                                  a broadcast message (sender, content).
+        messages_received (list): A list of strings, each containing a broadcast message.
         arena_width (int): The width of the game arena.
         arena_height (int): The height of the game arena.
 
